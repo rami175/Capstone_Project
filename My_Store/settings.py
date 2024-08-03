@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "pages",
     "app",
     "cart",
+    "payment",
     # 'social_django',
     
 ]
