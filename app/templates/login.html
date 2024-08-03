@@ -1,0 +1,58 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<header class="bg-dark py-5">
+	<div class="container px-4 px-lg-5 my-5">
+		<div class="text-center text-white">
+			<h1 class="display-4 fw-bolder">Login</h1>
+			<p class="lead fw-normal text-white-50 mb-0">
+				Log In To Your Account....
+			</p>
+		</div>
+	</div>
+</header>
+<div class="container">
+	<div class="row">
+		<br />
+		<br />
+		<center>
+			<div class="col-md-6 offset-md-3">
+				<br />
+				<br />
+				<form method="post" action="{% url 'login' %}">
+					{% csrf_token %}
+					<div class="mb-3">
+						<input
+							type="text"
+							class="form-control"
+							name="username"
+							placeholder="enter your user_name"
+						/>
+					</div>
+					<br />
+					<div class="mb-3">
+						<input
+							type="password"
+							class="form-control"
+							name="password"
+							placeholder="Enter your password"
+						/>
+					</div>
+
+					<button type="submit" class="btn btn-secondary">Log In</button>
+				</form>
+				<br />
+				<br />
+				<br />
+			</div>
+		</center>
+		<!-- <div class="facebook row">
+			<div class="col-md-6 offset-md-3">
+				<button class="btn btn-primary mb-2">
+					<a href="{% url 'social:begin' 'facebook' %}"
+						>Login With Facebook</a
+					>
+				</button>
+			</div>
+		</div> -->
+	</div>
+</div>
+{% endblock content %}
